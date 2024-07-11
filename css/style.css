@@ -172,7 +172,6 @@ body {
     animation: bounce 5s infinite ease-in-out;
 }
 
-
 /* Hero Section */
 .hero {
     display: flex;
@@ -227,10 +226,9 @@ body {
     background-color: #35FAF5;
 }
 
-
 /* About Section */
 .about {
-    padding: 4rem 2rem;
+    padding: 6rem 2rem 4rem 2rem; /* Added top padding to lower the section */
     background-color: #00F187;
     text-align: center;
 }
@@ -257,6 +255,7 @@ body {
 .about-event-container {
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap; /* Make the layout responsive */
 }
 
 .about-event-half {
@@ -399,7 +398,6 @@ body {
     animation: colorChange 2s infinite;
 }
 
-
 /* About Page Styling */
 .team-container, .advisory-board {
     display: flex;
@@ -483,10 +481,52 @@ body {
     color: #35FAF5;
 }
 
-/* About Section Padding Adjustment */
-.about {
-    padding: 6rem 2rem 4rem 2rem; /* Added top padding to lower the section */
-    background-color: #00F187;
-    text-align: center;
+/* Responsive Design */
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column; /* Stack content vertically */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .hero-text {
+        width: 100%; /* Full width */
+        margin-left: 0; /* Remove left margin */
+    }
+
+    .hero-image {
+        display: none; /* Hide the hero image */
+    }
+
+    .about {
+        padding: 4rem 1rem;
+    }
+
+    .about-event-container {
+        flex-direction: column; /* Stack event halves vertically */
+    }
+
+    .member-card {
+        width: 100%; /* Full width for member cards */
+    }
 }
 
+/* Tablet Styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .hero-content {
+        padding-left: 1rem; /* Adjust left padding */
+    }
+
+    .hero-text {
+        width: 50%; /* Cover half the hero section */
+    }
+
+    .about-event-container {
+        flex-direction: row; /* Keep event halves side by side */
+    }
+
+    .member-card {
+        width: 45%; /* Adjust width for member cards */
+    }
+}
