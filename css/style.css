@@ -142,7 +142,6 @@ body {
     100% { transform: scale(1); }
 }
 
-
 /* Keyframes for bouncing ball animation */
 @keyframes bounce {
     0%, 100% {
@@ -226,20 +225,20 @@ body {
     background-color: #35FAF5;
 }
 
-/* About Section */
-.about {
+/* Home About Section */
+#home-about {
     padding: 6rem 2rem 4rem 2rem; /* Added top padding to lower the section */
     background-color: #00F187;
     text-align: center;
 }
 
-.about h2 {
+#home-about h2 {
     font-size: 2rem;
     color: #002228;
     margin-bottom: 1rem;
 }
 
-.about p {
+#home-about p {
     font-size: 1rem;
     color: #490121;
     margin: 1rem 0;
@@ -399,6 +398,12 @@ body {
 }
 
 /* About Page Styling */
+#about-us {
+    padding: 6rem 2rem 4rem 2rem; /* Added top padding to lower the section */
+    background-color: #00F187;
+    text-align: center;
+}
+
 .team-container, .advisory-board {
     display: flex;
     flex-wrap: wrap;
@@ -482,7 +487,6 @@ body {
 }
 
 /* Responsive Design */
-
 /* Mobile Styles */
 @media (max-width: 768px) {
     .hero-content {
@@ -503,13 +507,6 @@ body {
         padding: 4rem 1rem;
     }
 
-    .about-event-container {
-        flex-direction: column; /* Stack event halves vertically */
-    }
-
-    .member-card {
-        width: 100%; /* Full width for member cards */
-    }
 }
 
 /* Tablet Styles */
@@ -522,11 +519,4 @@ body {
         width: 50%; /* Cover half the hero section */
     }
 
-    .about-event-container {
-        flex-direction: row; /* Keep event halves side by side */
-    }
-
-    .member-card {
-        width: 45%; /* Adjust width for member cards */
-    }
 }
