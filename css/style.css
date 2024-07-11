@@ -88,33 +88,29 @@ body {
 /* Header Styling */
 .header-container {
     position: fixed;
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 4rem);
-    max-width: 1200px;
-    height: 60px; /* Set the height to make the header container thinner */
-    background-color: #FFFDFB; /* Grey background */
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    top: 0;
+    left: 0;
+    width: 100%; /* Span the full width */
+    height: 80px; /* Set the height to make the header container thinner */
+    background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
     z-index: 1000;
-    /*display: flex;*/
+    display: flex;
     align-items: center; /* Center vertically */
-    /*justify-content: center;  Center horizontally */
-    padding: 0 1rem; /* Adjust padding if needed */
+    padding: 0 2rem; /* Adjust padding if needed */
 }
-
 
 .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align content to the left */
     align-items: center;
+    width: 100%; /* Ensure header takes full width */
 }
 
 .logo img {
     max-height: 50px; /* Adjust as needed */
     width: auto;
     height: auto;
+    margin-right: 2rem; /* Add space between logo and nav */
 }
 
 .nav ul {
@@ -133,34 +129,87 @@ body {
     color: #00F187;
 }
 
+/* Keyframes for text fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Keyframes for button pulse animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+/* Keyframes for bouncing ball animation */
+@keyframes bounce {
+    0%, 100% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: 100%;
+    }
+    50% {
+        top: 100%;
+        left: 100%;
+    }
+    75% {
+        top: 100%;
+        left: 0;
+    }
+}
+
+.bouncing-ball {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #00F187; /* Use one of your palette colors */
+    border-radius: 50%;
+    animation: bounce 5s infinite ease-in-out;
+}
+
+
 /* Hero Section */
 .hero {
     display: flex;
     align-items: center;
-    background-color: #002228;
-    height: 80vh;
-    padding-top: 100px; /* Adjust if header height changes */
+    height: 100vh;
+    background: url('../images/Copy\ of\ Intro\ to\ whataboutisms.png') no-repeat center center;
+    background-size: cover;
 }
 
 .hero-content {
     display: flex;
     flex: 1;
+    justify-content: flex-start; /* Align the content to the left */
+    padding-left: 2rem; /* Add some padding to the left to position the text away from the edge */
 }
 
 .hero-text {
-    flex: 1;
+    width: 30%; /* Cover one third of the hero section */
     padding: 2rem;
     color: #FFFDFB;
+    background-color: rgba(0, 34, 40, 0.8); /* Adding a semi-transparent background for better text readability */
+    text-align: center; /* Center text */
+    border-radius: 10px; /* Add rounded corners */
+    margin-left: 2rem; /* Add margin to further position the text */
+    animation: fadeIn 2s ease-in-out; /* Apply fade-in animation */
 }
 
 .hero-text h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    animation: fadeIn 2s ease-in-out 0.5s backwards; /* Delay animation for h1 */
 }
 
 .hero-text p {
     font-size: 1.2rem;
     margin-bottom: 2rem;
+    animation: fadeIn 2s ease-in-out 1s backwards; /* Delay animation for p */
 }
 
 .hero-text .btn {
@@ -171,27 +220,18 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     transition: background-color 0.3s ease;
+    animation: pulse 2s infinite; /* Apply pulse animation */
 }
 
 .hero-text .btn:hover {
     background-color: #35FAF5;
 }
 
-.hero-image {
-    flex: 1;
-    height: 100%;
-}
-
-.hero-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 /* About Section */
 .about {
     padding: 4rem 2rem;
-    background-color: #FFFDFB;
+    background-color: #00F187;
     text-align: center;
 }
 
@@ -358,3 +398,95 @@ body {
 .animated-btn {
     animation: colorChange 2s infinite;
 }
+
+
+/* About Page Styling */
+.team-container, .advisory-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.team-member, .advisory-member {
+    perspective: 1000px; /* Allows 3D space for card flipping */
+}
+
+.member-card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.member-card:hover {
+    transform: rotateY(180deg);
+}
+
+.member-front, .member-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-front {
+    background-color: #FFFDFB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.member-front img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.member-front h3 {
+    font-size: 1.5rem;
+    color: #002228;
+    margin-bottom: 0.5rem;
+}
+
+.member-front p {
+    font-size: 1rem;
+    color: #490121;
+}
+
+.member-back {
+    background-color: #002228;
+    color: #FFFDFB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+}
+
+.member-back a {
+    font-size: 2rem;
+    color: #00F187;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.member-back a:hover {
+    color: #35FAF5;
+}
+
+/* About Section Padding Adjustment */
+.about {
+    padding: 6rem 2rem 4rem 2rem; /* Added top padding to lower the section */
+    background-color: #00F187;
+    text-align: center;
+}
+
