@@ -557,7 +557,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 1rem; /* Reduced gap to allow more cards to fit */
-    flex-wrap: nowrap; /* Prevents wrapping */
+    flex-wrap: wrap; /* Prevents wrapping */
     overflow-x: hidden; /* No horizontal scrolling */
 }
 
