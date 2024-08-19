@@ -533,18 +533,45 @@ body {
 
 /* Background Color Change for Advisory Board */
 .advisory-board {
-    background-color: #F4F4F4; /* Light grey background */
+    background-color: #F4F4F4;  /*Light grey background */
     padding: 2rem 0; /* Adjust padding for the section */
 }
 
-/* Additional Styles for Section Headers */
+/* Additional Styles for Section Headers 
 #about-us h2 {
     font-size: 2rem;
     color: #002228;
     margin-bottom: 2rem;
     padding-bottom: 0.5rem;
-    border-bottom: 2px solid #00F187; /* Underline style */
+    border-bottom: 2px solid #00F187; /* Underline style 
+} */
+
+/* Additional Styles for Section Headers */
+
+/* Keep the green line for "Our Team" */
+#about-us h2.our-team-heading {
+    font-size: 2rem;
+    color: #002228;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #00F187; /* Green underline style */
 }
+
+/* Remove the green line for "Advisory Board" */
+#about-us h2.advisory-board-heading {
+    font-size: 2rem;
+    color: #002228;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: none; /* No underline style */
+}
+
+/* Background Color Change for Advisory Board */
+.advisory-board {
+    background-color: #F4F4F4; /* Light grey background */
+    padding: 2rem 0; /* Adjust padding for the section */
+}
+
 
 .about {
     padding: 6rem 2rem; /* Increased padding for spacing */
@@ -643,6 +670,8 @@ body {
     width: 200px; /* Reduced width to fit more cards in a row */
     height: 300px; /* Adjusted height proportionally */
 }
+
+
 
 /* Responsive Design */
 /* Mobile Styles */
