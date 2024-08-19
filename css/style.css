@@ -384,8 +384,13 @@ body {
     margin-bottom: 1rem; /* Adjust the value as needed */
 }
 
+.event-card h6 {
+    margin-bottom: 1rem; /* Adjust the value as needed */
+}
+
 .event-card p {
-    font-size: 0.9rem; /* Adjust the value as needed */
+    font-size: 0.9rem;
+    margin-bottom: 1rem;  /* Adjust the value as needed */
 }
 
 .event-card.upcoming {
