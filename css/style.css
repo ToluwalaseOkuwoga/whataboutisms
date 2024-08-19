@@ -228,7 +228,7 @@ body {
 /* Home About Section */
 #home-about {
     padding: 6rem 2rem 4rem 2rem; /* Added top padding to lower the section */
-    background-color: #D3D3D3;
+    background-color: #ffffff;
     text-align: center;
 }
 
@@ -240,7 +240,7 @@ body {
 
 #home-about p {
     font-size: 1rem;
-    color: #490121;
+    color: #002228;
     margin: 1rem 0;
 }
 
