@@ -337,12 +337,21 @@ body {
 /* Interactive Timeline Section */
 .timeline {
     padding: 4rem 2rem;
-    background-color: #D3D3D3;
+    background-color: #ffffff;
     text-align: center;
 }
 
+.timeline-divider {
+    border: none;
+    border-top: 2px solid #00F187; /* Adjust the color and thickness */
+    width: 100%; /* Adjust the width as needed */
+    margin: 0 auto 2rem auto; /* Center the divider and add margin below */
+}
+
+
 .timeline h2 {
     margin-bottom: 2rem; /* Add space below the heading */
+
 }
 
 .timeline-container {
@@ -425,9 +434,23 @@ body {
 .speakers {
     background-color: #00F187;
     padding: 4rem 2rem;
-    background-image: linear-gradient(135deg, #00F187 25%, #35FAF5 25%, #35FAF5 50%, #00F187 50%, #00F187 75%, #35FAF5 75%, #35FAF5);
+    background: url('../images/Copy\ of\ Intro\ to\ whataboutisms.png');
+    background-position: center;
+    background-size: cover;
+    /* background-image: linear-gradient(135deg, #00F187 25%, #35FAF5 25%, #35FAF5 50%, #00F187 50%, #00F187 75%, #35FAF5 75%, #35FAF5);*/
+    /*background: radial-gradient(circle, #00F187, #ffffff); */
+    /* background: repeating-linear-gradient(
+    45deg,
+    #00F187,
+    #00F187 10px,
+    #35FAF5 10px,
+    #35FAF5 20px
+); */
+
     background-size: 20px 20px;
-    color: #FFFDFB;
+    /*color: #FFFDFB;*/
+    color: #002228;
+    
 }
 
 .speakers h2 {
