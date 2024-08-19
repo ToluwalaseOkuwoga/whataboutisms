@@ -19,7 +19,6 @@
                     <li><a href="index.html">HOME</a></li>
                     <li><a href="about.html">ABOUT US</a></li>
                     <li><a href="events.html">EVENTS</a></li>
-                    <!--<li><a href="#contact">Contact</a></li> -->
                 </ul>
             </nav>
         </header>
@@ -29,11 +28,10 @@
     <section class="hero events-hero">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Explore Our Events</h1>
-                <p>Dive into debates on today's crucial topics.</p>
+                <h1>Whataboutisms, the Debate</h1>
+                <p>A dynamic debate for young communicators.</p>
                 <a href="#about-event" class="btn">Learn More</a>
             </div>
-            <div class="bouncing-ball"></div>
         </div>
     </section>
 
@@ -53,6 +51,61 @@
                 <a href="https://www.eventbrite.com/e/whatabout-artificial-intelligence-are-we-advancing-too-quickly-tickets-920183412357?aff=oddtdtcreator" target="_blank" class="btn animated-btn">Register Now</a>
             </div>
         </div>
+    </section>
+
+    <!-- What to Expect Section -->
+    <section id="what-to-expect" class="expect">
+        <h2>What to Expect</h2>
+        <div class="expect-container">
+            <div class="expect-item">
+                <i class="fas fa-microphone-alt"></i>
+                <h3>Valuable Talks</h3>
+                <p>Engaging and thought-provoking discussions tailored for young communication professionals.</p>
+            </div>
+            <div class="expect-item">
+                <i class="fas fa-users"></i>
+                <h3>Networking Channels</h3>
+                <p>Build connections with fellow communication and media professionals through networking sessions.</p>
+            </div>
+            <div class="expect-item">
+                <i class="fas fa-briefcase"></i>
+                <h3>Freelance Roundtables</h3>
+                <p>Join digital rooms to discuss a variety of topics, with a focus on freelance opportunities.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Timeline Section -->
+    <section id="timeline" class="timeline">
+        <h2>Interactive Timeline of Events</h2>
+        <div class="timeline-container">
+            <!-- Current/Upcoming Event -->
+            <div class="event-card upcoming">
+                <h3>Upcoming Event: AI and Communication</h3>
+                <p>Join us for a debate on the impact of AI in the communications industry.</p>
+                <a href="https://www.eventbrite.com/e/whatabout-artificial-intelligence-are-we-advancing-too-quickly-tickets-920183412357?aff=oddtdtcreator" target="_blank" class="btn">Register Now</a>
+            </div>
+
+            <!-- Past Events -->
+            <div class="event-card past">
+                <h3>Past Event: Social Media and Ethics</h3>
+                <p>Discussion on ethical issues in social media communication.</p>
+                <a href="#" class="btn" onclick="openModal(event, 'event1')">View Details</a>
+            </div>
+
+            <div class="event-card past">
+                <h3>Past Event: AI and Communication</h3>
+                <p>Debate on the impact of AI in the communications industry.</p>
+                <a href="#" class="btn" onclick="openModal(event, 'event2')">View Details</a>
+            </div>
+
+            <div class="event-card past">
+                <h3>Past Event: Another Event</h3>
+                <p>Some other event details.</p>
+                <a href="#" class="btn" onclick="openModal('event3')">View Details</a>
+            </div>
+        </div>
+        <button id="expand-timeline" class="btn">+ Show More Events</button>
     </section>
 
     <!-- Speakers Section -->
@@ -86,18 +139,46 @@
         </div>
     </section>
 
+    <!-- Modal for Event 1 -->
+    <div id="event1-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('event1')">&times;</span>
+            <h2>Social Media and Ethics</h2>
+            <p>Details about the Social Media and Ethics event, including participants, discussions, and outcomes.</p>
+        </div>
+    </div>
+
+    <!-- Modal for Event 2 -->
+    <div id="event2-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('event2')">&times;</span>
+            <h2>AI and Communication</h2>
+            <p>Details about the AI and Communication event, including the impact of AI on the communications industry.</p>
+        </div>
+    </div>
+
+    <!-- Modal for Event 3 -->
+    <div id="event3-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('event3')">&times;</span>
+            <h2>Another Event</h2>
+            <p>Details about the Another Event, including participants, discussions, and outcomes.</p>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="social-links">
             <a href="https://www.linkedin.com/company/sowhataboutisms/" class="social-link" target="_blank"><i class="fab fa-linkedin"></i></a>
             <a href="https://www.instagram.com/sowhataboutisms?igsh=Yjd0bm1qYWczdm1z" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:info@whataboutisms.com" class="social-link"><i class="fas fa-envelope"></i></a>
+            <a href="mailto:info@whataboutisms.org" class="social-link"><i class="fas fa-envelope"></i></a>
         </div>
         <div class="footer-info">
             <p>&copy; 2024 Whataboutisms. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.js" defer></script>
+
 </body>
 </html>

@@ -20,3 +20,29 @@ const observer = new IntersectionObserver(entries => {
 document.querySelectorAll('.about, .speaker').forEach(section => {
     observer.observe(section);
 });
+
+function openModal(event, eventId) {
+    event.preventDefault();  // This prevents the default anchor behavior
+    var modal = document.getElementById(eventId + '-modal');
+    if (modal) {
+        modal.style.display = 'flex';
+    }
+}
+
+
+window.onclick = function(event) {
+    const modals = document.querySelectorAll('.modal');
+    modals.forEach(modal => {
+        if (event.target === modal) {
+            closeModal(modal.getAttribute('id').replace('-modal', ''));
+        }
+    });
+}
+
+function closeModal(eventId) {
+    var modal = document.getElementById(eventId + '-modal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
