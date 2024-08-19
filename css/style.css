@@ -321,7 +321,7 @@ body {
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
-    transition: transform 0.3s ease;
+    /*transition: transform 0.3s ease;*/
 }
 
 .expect-item i {
@@ -330,9 +330,9 @@ body {
     margin-bottom: 1rem;
 }
 
-.expect-item:hover {
+/*.expect-item:hover {
     transform: translateY(-10px);
-}
+}*/
 
 /* Interactive Timeline Section */
 .timeline {
