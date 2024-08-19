@@ -176,7 +176,7 @@ body {
     display: flex;
     align-items: center;
     height: 100vh;
-    background: url('../images/Copy\ of\ Intro\ to\ whataboutisms.png') no-repeat center center;
+    background: url('../images/4da28749-26e7-4ddd-a410-d1d48ed98404\ 2.JPG') no-repeat center center;
     background-size: cover;
 }
 
@@ -524,43 +524,53 @@ body {
 }
 
 /* About Page Styling */
-#about-us {
+/* Section Divider */
+.section-divider {
+    height: 4px;
+    background-color: #000000; /* or any other color */
+    margin: 4rem 0; /* Adjusts the space around the divider */
+}
+
+/* Background Color Change for Advisory Board */
+.advisory-board {
+    background-color: #F4F4F4; /* Light grey background */
+    padding: 2rem 0; /* Adjust padding for the section */
+}
+
+/* Additional Styles for Section Headers */
+#about-us h2 {
+    font-size: 2rem;
+    color: #002228;
+    margin-bottom: 2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #00F187; /* Underline style */
+}
+
+.about {
+    padding: 6rem 2rem; /* Increased padding for spacing */
+    background-color: #FFFDFB;
     text-align: center;
 }
 
-/* Team Section with Background Image */
-.team-section {
-    padding: 6rem 2rem 4rem 2rem; /* Added top padding to lower the section */
-    background: url('../images/Copy\ of\ Intro\ to\ whataboutisms.png') no-repeat center center;
-    background-size: cover;
+.team-container,
+.advisory-board {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Reduced gap to allow more cards to fit */
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow-x: hidden; /* No horizontal scrolling */
 }
 
 .team-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem 0;
-    /*background: rgba(0, 34, 40, 0.8);  Adding a semi-transparent background for better text readability */
-}
-
-.advisory-board {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem 0;
-    background-color: #00F187; /* Keeping the original background color for advisory board */
+    padding-bottom: 2rem; /* Added padding for spacing */
 }
 
 .team-member, .advisory-member {
-    perspective: 1000px; /* Allows 3D space for card flipping */
+    perspective: 1000px;
 }
 
 .member-card {
     position: relative;
-    width: 300px;
-    height: 400px;
     transform-style: preserve-3d;
     transition: transform 0.6s;
 }
@@ -589,21 +599,21 @@ body {
 }
 
 .member-front img {
-    width: 100px;
-    height: 100px;
+    width: 80px; /* Reduced image size */
+    height: 80px; /* Reduced image size */
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 1rem;
 }
 
 .member-front h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Reduced font size */
     color: #002228;
     margin-bottom: 0.5rem;
 }
 
 .member-front p {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Reduced font size */
     color: #490121;
 }
 
@@ -617,7 +627,7 @@ body {
 }
 
 .member-back a {
-    font-size: 2rem;
+    font-size: 1.5rem; /* Reduced icon size */
     color: #00F187;
     text-decoration: none;
     transition: color 0.3s ease;
@@ -625,6 +635,13 @@ body {
 
 .member-back a:hover {
     color: #35FAF5;
+}
+
+/* Adjusted Member Card Sizes */
+.team-container .member-card,
+.advisory-board .member-card {
+    width: 200px; /* Reduced width to fit more cards in a row */
+    height: 300px; /* Adjusted height proportionally */
 }
 
 /* Responsive Design */
