@@ -239,7 +239,7 @@ body {
 }
 
 #home-about p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #002228;
     margin: 1rem 0;
 }
@@ -275,8 +275,8 @@ body {
 }
 
 #about-event p {
-    font-size: 1rem;
-    color: #490121;
+    font-size: 0.9rem;
+    color: #002228;
     margin: 1rem 0;
 }
 
@@ -514,6 +514,7 @@ body {
     color: #FFFDFB;
     padding: 2rem 1rem;
     text-align: center;
+    font-size: 0.9rem;
 }
 
 .footer .social-links {
@@ -523,7 +524,7 @@ body {
 .footer .social-link {
     color: #FFFDFB;
     margin: 0 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     transition: color 0.3s ease;
 }
 
